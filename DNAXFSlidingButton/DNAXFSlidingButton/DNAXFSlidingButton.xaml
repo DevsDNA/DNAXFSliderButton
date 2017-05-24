@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DNAXFSlidingButton.DNAXFSlidingButton">
+    <Grid x:Name="ParentFrame" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <ContentView x:Name="Background"/>
+        <ContentView x:Name="ToShow"/>
+        <ContentView x:Name="ToSlide" HorizontalOptions="Start" VerticalOptions="FillAndExpand"/>
+        <Image x:Name="PanPlaceholder" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#00FFFFFF">
+            <Image.GestureRecognizers>
+                <PanGestureRecognizer  PanUpdated="PanGestureRecognizer_PanUpdated"/>
+            </Image.GestureRecognizers>
+        </Image>
+    </Grid>
+</ContentView>

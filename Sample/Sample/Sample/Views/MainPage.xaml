@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Sample.Views"
+             xmlns:control="clr-namespace:DNAXFSlidingButton;assembly=DNAXFSlidingButton"
+             xmlns:viewmodel="clr-namespace:Sample.ViewModels"
+             x:Class="Sample.Views.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <Label x:Name="LblCount" VerticalOptions="Start" HorizontalOptions="Center" FontSize="24" Margin="0,30" Text="{Binding Count}"/>
+        <control:DNAXFSlidingButton HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="44" WidthRequest="150" 
+                                  ActivateCommand="{Binding TestCommand}" AnimationSpeed="800">
+            <control:DNAXFSlidingButton.BackgroundContent>
+                <ContentView>
+                    <Grid BackgroundColor="Green">
+                        <Label Margin="2,2,50,2" Text="Activated!" FontSize="12" VerticalOptions="Center" HorizontalOptions="Start" LineBreakMode="WordWrap"/>
+                    </Grid>
+                </ContentView>
+            </control:DNAXFSlidingButton.BackgroundContent>
+            <control:DNAXFSlidingButton.IndicatorContent>
+                <ContentView>
+                    <Grid BackgroundColor="Red">
+                        <Label Margin="50,2,2,2" Text="text to show in the button" FontSize="12" VerticalOptions="Center" HorizontalOptions="Start" LineBreakMode="WordWrap"/>
+                    </Grid>
+                </ContentView>
+            </control:DNAXFSlidingButton.IndicatorContent>
+            <control:DNAXFSlidingButton.ThumbContent>
+                <ContentView  WidthRequest="40" HeightRequest="40" HorizontalOptions="Start" VerticalOptions="Center">
+                    <Grid Margin="2">
+                        <BoxView BackgroundColor="LightCyan"/>
+                        <Label Text="i" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                    </Grid>
+                </ContentView>
+            </control:DNAXFSlidingButton.ThumbContent>
+        </control:DNAXFSlidingButton>
+    </Grid>
+
+</ContentPage>
