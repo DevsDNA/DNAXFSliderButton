@@ -3,6 +3,9 @@ This control allow you to create an sliding button, much like the shutdown butto
 
 The control is completely written in XAML and C# and don't uses renders, so it is available on iOS, Android and Windows.
 
+
+![SliderButton](/screenshots/screenshot.gif?raw=true "Slider button cross platform")
+
 ## How to use the control.
 Just include the code (or compile it) add a XMLNS to the control namespace:
 
